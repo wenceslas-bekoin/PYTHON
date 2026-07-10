@@ -1,11 +1,19 @@
 import psycopg2
+from dotenv import load_dotenv
+import os
+
+from pathlib import Path
+
+# Chemin absolu vers .env
+env_path = Path("/home/bekoin-wenceslas/PYTHON/.env")
+load_dotenv(dotenv_path=env_path)
 
 # 1️ Connexion
 connexion = psycopg2.connect(
-    host     = "localhost",
-    database = "bibliothèque",
-    user     = "bekoin",
-    password = "wen@ce$l&2026"
+    host     = os.getenv("DB_HOST"),
+    database = os.getenv("DB_NAME"),
+    user     = os.getenv("DB_USER"),
+    password = os.getenv("DB_PASSWORD")
 )
 curseur = connexion.cursor()
 
