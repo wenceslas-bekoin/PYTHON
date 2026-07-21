@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bibliothèque conçue avec Python et Flask">
+    <title> {% block title%}Ma Bibliothèque{% endblock %}</title>
+    <!--lien css-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+    <!--lien favicon-->
+    <link rel="icon" href="{{url_for('static', filename='favicon.ico')}}">
+</head>
+<body>
+    <!--header-->
+    <header>
+  <img src="{{url_for('static', filename='images/Mon_Logo.png')}}" alt="logo"  class="logo-rond">
+
+  <!--navigation-->
+  <nav>
+     <a href="{{ url_for('accueil') }}">Accueil</a> |
+        <a href="{{ url_for('liste_livres')}}">Livres</a> |
+        <a href="{{ url_for('liste_auteurs')}}">Auteurs</a> |
+        <a href="{{ url_for('liste_membres')}}">Membres</a> | 
+        <a href="{{ url_for('liste_emprunts')}}">Emprunts</a> |
+        <a href="{{ url_for('apropos') }}">À propos</a>
+  </nav>
+</header>
+
+<!--main-->
+    <main>
+        {% block content %}
+
+        {% endblock %}
+    </main>
+
+    <!--footer-->
+    <footer>
+    <p>Copyright © 2026 Bibliothèque - Tous droits réservés.</p>
+  </footer>
+
+  <!--script js-->
+    <script src="{{ url_for('static', filename='js/main.js')}}"></script>
+</body>
+</html>

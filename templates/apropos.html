@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}À propos - Ma Bibliothèque{% endblock %}
+
+{% block content %}
+
+    <h1>À propos de la Bibliothèque</h1>
+    <p>Cette application de gestion de bibliothèque a été entièrement conçue avec Python et Flask.</p>
+    <p>Elle permet de gérer efficacement les livres, les auteurs, les membres et les emprunts en temps réel.</p>
+
+    <h2>Qui suis-je!</h2>
+    <figure>
+        <img src="{{url_for('static', filename='images/Bekoin2.jpg')}}"  alt="portrait" class="portrait-image">
+        <figcaption>Bekoin bekoin wenceslas</figcaption>
+    </figure>
+
+    <!--retour à l'accueil-->
+    <a href="{{url_for('accueil')}}">Retour à l'accueil</a>
+    
+{% endblock %}

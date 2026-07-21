@@ -1,0 +1,72 @@
+
+/* livre */
+.carte-livre {
+  padding: 10px;
+  margin-bottom: 10px;
+  list-style: none;
+  border: 1px solid gray;
+}
+
+.titre-livre {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.auteur {
+  font-size: 0.75rem;
+  color: gray;
+}
+
+.liste-livres {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* logo */
+.logo-rond {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+/* portrait-image */
+.portrait-image {
+  width: 100%;
+  max-height: 400px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border: 1px solid black;
+}
+
+/* hero-image */
+.hero-image {
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+/* liste des sites */
+.cachee {
+  display: none;
+}
+
+/* selecteur */
+* {
+  font-family: Arial, Verdana, sans-serif;
+}
+
+/* responsive */
+@media (max-width: 600px) {
+  .liste-livres {
+    flex-direction: column;
+  }
+}

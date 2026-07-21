@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Listes des emprunts{% endblock %}
+
+{% block content %}
+
+    <h1>Listes des emprunts</h1>
+    <ul>
+        {% for emprunt in emprunts %}
+           <li>{{ emprunt[0] }} - {{ emprunt[1] }} - {{ emprunt[2] }} - {{ emprunt[3] }} - {{ emprunt[4] }}</li>
+        {% endfor %}
+    </ul>
+    <!--retour à l'accueil-->
+    <a href="{{url_for('accueil')}}">Retour à l'accueil</a>
+     
+{% endblock %}
