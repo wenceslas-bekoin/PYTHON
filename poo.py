@@ -17,7 +17,7 @@ class Auteur:
         self.nationalite = nationalite
         self.date_naissance = date_naissance
 
-# création de la méthode afficher pour la classe Auteur
+# création de la méthode affichée pour la classe Auteur
     def afficher(self):
         print(f"{self.nom} est {self.nationalite} et est né(e) le {self.date_naissance} .")
 
@@ -45,7 +45,7 @@ print(f"{livre2.titre} est écrit par {livre2.auteur.nom} et contient {livre2.pa
 #Afficher titre, auteur et le nombre de pages du livre3
 print(f"{livre3.titre} est écrit par {livre3.auteur.nom} et contient {livre3.pages} pages.")
 
-#Afficher des livres, auteurs et le nombres de pages avec la boucle for
+#Afficher des livres, auteurs et le nombre de pages avec la boucle for
 for livre in [livre1, livre2, livre3]:
     print(f"{livre.titre} est écrit par {livre.auteur.nom} et contient {livre.pages} pages.")
 
@@ -57,7 +57,7 @@ for livre in [livre1, livre2, livre3]:
 
 print("----------------------------------------------------")
 
-#Appelle de la méthode afficher pour les auteurs avec for
+#Appelle de la méthode affichée pour les auteurs avec for
 
 for auteur in [auteur1, auteur2, auteur3]:
     auteur.afficher()

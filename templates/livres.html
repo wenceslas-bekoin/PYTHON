@@ -1,16 +1,41 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ma bibliothèque</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block title %}Liste des livres{% endblock %}
+
+{% block content %}
+
     <h1>Liste des livres</h1>
-    <ul>
+    <ul class="liste-livres">
         {% for livre in livres %}
-           <li>{{ livre[0] }} - {{ livre[1] }}</li>
+           <li class="carte-livre">
+                <span class="titre-livre">{{ livre[0] }}</span> - 
+                <span class="auteur">{{ livre[1] }}</span>
+            </li>
         {% endfor %}
-    </ul> 
-</body>
-</html>
+    </ul>
+
+    <h2>Site à visiter</h2>
+
+    <button id="afficher-site">Afficher les sites</button>
+    <ul id="sites-liste" class="cachee">
+        <li>
+            <a href="https://www.gutenberg.org/" target="_blank" rel="noopener noreferrer">
+            Project Gutenberg</a>
+        </li>
+
+        <li>
+            <a href="https://books.google.com/" target="_blank" rel="noopener noreferrer">
+            Google Books</a>
+        </li>
+
+        <li>
+            <a href="https://openlibrary.org/" target="_blank" rel="noopener noreferrer">
+            Open Library</a>
+        </li>
+
+    </ul>
+    <!--retour à l'accueil-->
+    <a href="{{url_for('accueil')}}">Retour à l'accueil</a>
+    
+{% endblock %}
+

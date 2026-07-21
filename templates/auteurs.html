@@ -1,16 +1,16 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ma bibliothèque</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block title %}Liste des auteurs{% endblock %}
+
+{% block content %}
+
     <h1>Liste des auteurs</h1>
     <ul>
         {% for auteur in auteurs %}
-           <li>{{ auteur[0] }} - {{ auteur[1] }}</li>
+           <li>{{ auteur[0] }} - {{ auteur[1] }} -{{ auteur[2] }}</li>
         {% endfor %}
     </ul> 
-</body>
-</html>
+    <!--retour à l'accueil-->
+    <a href="{{url_for('accueil')}}">Retour à l'accueil</a>
+    
+{% endblock %}

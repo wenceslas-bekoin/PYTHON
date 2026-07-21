@@ -18,7 +18,7 @@ dire_bonjour_a("Béatrice")
 
 print("\n")
 
-# Fonction avec paramtrès par défaut
+# Fonction avec paramètres par défaut
 def ma_vision(but="Je souhaite devenir un développeur python compétent et un homme très sage."):
     print(f"Ma vision est : {but}")
 
@@ -44,6 +44,6 @@ def est_pair(nombre):
 # calculer l'aire d'un rectangle
 print(calculer_aire_rectangle(4, 5))
 
-# vérifier si un nombre sest paire
+# vérifier si un nombre est paire
 print(est_pair(5))
 print(est_pair(20))
