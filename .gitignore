@@ -1,1 +1,25 @@
+# --- ENVIRONNEMENT VIRTUEL ---
+venv/
+.venv/
+env/
+
+# --- CACHES PYTHON ---
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# --- BASE DE DONNÉES & SÉCURITÉ ---
+# Bloque les variables d'environnement (mots de passe PostgreSQL)
 .env
+# Bloque les fichiers de dump ou de logs de base de données locaux
+*.sql
+*.log
+
+# --- ÉDITEURS DE CODE ---
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp

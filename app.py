@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect
 from db import get_livres, get_auteurs, ajouter_livre, ajouter_auteur, ajouter_membre, get_membres, get_emprunts
+from flask import jsonify
 
 app = Flask(__name__)
 
@@ -16,6 +17,14 @@ def liste_livres():
     for livre in livres:
         resultat += f"{livre[0]} - {livre[1]}<br>"
     return render_template("livres.html", livres=livres)
+
+@app.route("/api/livres")
+def api_livres():
+    livres = get_livres()
+    resultat = []
+    for livre in livres:
+        resultat.append({"titre": livre[0], "genre": livre[1]})
+    return jsonify(resultat)
 
 #route pour les auteurs
 @app.route("/auteurs")
