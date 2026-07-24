@@ -6,26 +6,14 @@ Le but est d'apprendre les fonctionnalités de Python
 ainsi que celui de Flask.
 
 ## Contenu
-- `boucle_for.py`
-Ce fichier contient comment faire la boucle for en Python.
-- `boucle_while.py`
-Il contient l'utilisation de la boucle while en Python.
-- `conditions.py`
-Il contient l'utilisation des conditions if, else en Python.
-- `db.py`
-Connexion à la base de données.
-- `dictionnaire.py`
-Comment faire un dictionnaire en Python.
-- `fonctions.py`
-Utilisation, définir et appeller une fonction.
-- `listes.py`
-Utilisation des listes en Python.
-- `variables.py`
-Comment fonctionne et utilisez les variables.
 - `dossier templates`
-Contient des fichier html.
-- `dossier static`
-Contient du CSS, des images et du JavaScript.
+Pour les fichiers HTML, CSS et JavaScript.
+- `app.py`
+Contient le code principal de l'application.
+- `db.py`
+La base de données.
+- `scanner.py`
+Pour scanner un port sur une addresse ip.
 
 ## Utilisation
 
